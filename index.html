@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Frontend Mentor Interactive Card Details Form Solution">
+	<meta name="keywords" content="Frontend Mentor Interactive Card Details Form Solution, Interactive Card Details Form">
+	<meta name="author" content="Aimal Khan">
+	<title>Frontend Mentor | Interactive Card Details Form</title>
+	<link rel="icon" type="image/x-icon" href="./images/favicon-32x32.png">
+	<link rel="stylesheet" type="text/css" href="./styles.css">
+	<script src="./external.js" defer></script>
+</head>
+<body>
+	<main>
+		<div class="container">
+			<div class="div1">
+				<div class="card1">
+					<div class="logo">
+						<img src="images/card-logo.svg" alt="logo">
+					</div>
+					<div class="emptyDiv"></div>
+					<div class="getInput">
+						<div class="getCardNum"></div>
+						<div class="details">
+							<div class="name"></div>
+							<div class="cvc">
+								<span class="span1"></span><span class="span2"></span>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="card2">
+					<div class="getCvc"></div>
+				</div>
+			</div>
+			<div class="div2">
+				<form id="form" action="success.html" method="GET">
+					<div class="inputDiv">
+						<label for="fullName">CARDHOLDER NAME</label>
+						<input type="text" name="name" placeholder="e.g.Jane Appleseed" id="fullName">
+						<div class="error1"></div>
+					</div>
+					<div class="inputDiv">
+						<label for="cardNumber">CARD NUMBER</label>
+						<input type="text" name="cardnumber" placeholder="e.g.1234 5678 9123 0000" id="cardNumber" maxlength="19">
+						<div class="error2"></div>
+					</div>
+					<div class="date">
+						<div class="exp-date">
+							<label>EXP. DATE (MM/YY)</label>
+							<div class="month-year">
+								<input type="text" name="month" id="month" placeholder="MM" maxlength="2">
+								<input type="text" name="year" id="year" maxlength="2" placeholder="YY">
+								<div class="error4"></div>
+							</div>
+						</div>
+						<div class="cvcNum">
+							<label>CVC</label>
+							<input type="text" name="cvcnumber" id="cvcNumber" placeholder="e.g.123" maxlength="3">
+							<div class="error3"></div>
+						</div>
+					</div>
+					<button type="submit" id="btn">Confirm</button>
+				</form>
+			</div>
+		</div>
+	</main>
+</body>
+</html>

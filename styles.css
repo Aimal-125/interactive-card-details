@@ -1,0 +1,688 @@
+*, *::before, *::after {
+	margin: 0;
+	padding: 0;
+}
+* {
+	box-sizing: border-box;
+	font-family: "monospace", sans-serif;
+}
+body {
+	min-height: 100vh;
+}
+.container {
+	min-height: 100vh;
+	display: flex;
+}
+.div1 {
+	width: 30%;
+	position: relative;
+	background: linear-gradient(35deg, blue, brown);
+}
+.card1 {
+	width: 55vh;
+	height: 30vh;
+	position: absolute;
+	top: 17%;
+	left: 30%;
+	border-radius: 2vh;
+	background: linear-gradient(150deg, black, brown, black);
+	animation: myanime1 1 2s linear;
+}
+.logo {
+	padding: 4vh 0 0 4vh;
+}
+.logo img {
+	display: block;
+	width: 20%;
+	height: 100%;
+	object-fit: contain;
+}
+.emptyDiv {
+	padding: 3vh;
+}
+.getInput {
+	height: 14vh;
+	padding: 2vh;
+}
+.getCardNum {
+	text-align: center;
+	font-size: 4vh;
+	color: white;
+	font-weight: bold;
+}
+.details {
+	display: flex;
+	justify-content: space-between;
+	padding: 1vh 2vh 0 2vh;
+	font-weight: bold;
+	color: white;
+	font-size: 2vh;
+}
+.card2 {
+	width: 55vh;
+	height: 30vh;
+	position: absolute;
+	bottom: 17%;
+	left: 60%;
+	border-radius: 2vh;
+	background: url(images/bg-card-back.png) no-repeat center;
+	background-size: cover;
+	animation: myanime2 1 2s linear;
+}
+.getCvc {
+	position: absolute;
+	right: 7vh;
+	top: 50%;
+	transform: translateY(-60%);
+	-webkit-transform: translateY(-60%);
+	color: white;
+	font-size: 2vh;
+	letter-spacing: 0.3vh;
+	text-align: center;
+	font-weight: bold;
+}
+.div2 {
+	width: 70%;
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+}
+#form {
+	padding: 4vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	gap: 3vh;
+}
+.inputDiv {
+	display: flex;
+	flex-direction: column;
+	gap: 1vh;
+}
+input {
+	padding: 2vh;
+	border-radius: 1vh;
+	border: 0.2vh solid gray;
+	font-size: 2vh;
+	font-weight: bold;
+}
+input:focus {
+	border: 0.5vh dotted purple;
+	outline: none;
+}
+label {
+	font-size: 2vh;
+}
+.error1, .error2, .error3, .error4 {
+	height: 0;
+	overflow: hidden;
+	color: red;
+	font-size: 1.5vh;
+}
+.error1-visible, .error2-visible, .error3-visible, .error4-visible {
+	height: initial;
+	padding: 0 0 0 2vh;
+	transition: 0.3s;
+}
+.error4-visible {
+	padding: 0.7vh 0 0 0;
+}
+.redBorder {
+	border: 1px solid red;
+}
+.date {
+	display: flex;
+	gap: 2vh;
+}
+.exp-date {
+	display: flex;
+	flex-direction: column;
+	gap: 1vh;
+}
+.cvcNum {
+	display: flex;
+	flex-direction: column;
+	gap: 1vh;
+}
+#month {
+	width: 15vh;
+}
+#year {
+	width: 15vh;
+}
+#btn {
+	font-size: 2vh;
+	border: none;
+	padding: 2vh;
+	border-radius: 1vh;
+	background: black;
+	font-weight: bold;
+	color: white;
+	cursor: pointer;
+	transition: 0.3s;
+}
+#btn:hover {
+	background: brown;
+	transition: 0.3s;
+}
+
+/* styling for success.html start */
+
+.thanksDiv {
+	width: 100%;
+	height: 100%;
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+}
+.detailsContainer {
+	width: 60%;
+	height: 60%;
+	padding: 4vh;
+}
+.circleContainer {
+	height: 40%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.circle {
+	width: 15vh;
+	height: 15vh;
+	border-radius: 50%;
+	clip-path: circle(50%);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background: linear-gradient(35deg, green, lightgreen, green);
+	position: relative;
+	animation: myanime4 1 2s linear;
+	padding-top: 2vh;
+}
+.tickContainer {
+	width: 60%;
+	height: 50%;
+	position: absolute;
+	left: 50%;
+	transform: translateX(-50%);
+	-webkit-transform: translateX(-50%);
+	animation: myanime3 1 2s linear;
+}
+.tick1 {
+	position: absolute;
+	width: 40%;
+	height: 20%;
+	top: 48%;
+	transform: rotate(47deg);
+	-webkit-transform: rotate(47deg);
+	border-radius: 1vh;
+	background: white;
+	z-index: 1;
+}
+.tick2 {
+	position: absolute;
+	width: 90%;
+	height: 20%;
+	top: 31%;
+	left: 14%;
+	transform: rotate(143deg);
+	-webkit-transform: rotate(143deg);
+	border-radius: 1vh;
+	background: white;
+}
+.textContainer {
+	height: 60%;
+}
+.thankyou {
+	text-align: center;
+	padding: 3vh;
+}
+.continueDiv {
+	text-align: center;
+	padding: 3vh;
+}
+.thankyou h1 {
+	padding: 1vh;
+	font-size: 3vh;
+	animation: myanime5 1 2s linear;
+}
+.thankyou p {
+	padding: 1vh;
+	font-size: 2vh;
+	animation: myanime5 1 2s linear;
+}
+#continueBtn {
+	width: 100%;
+	padding: 2vh;
+	cursor: pointer;
+	border: none;
+	border-radius: 1vh;
+	background: black;
+	color: white;
+	font-weight: bold;
+	font-size: 2vh;
+	transition: 0.3s;
+}
+#continueBtn:hover {
+	background: brown;
+	transition: 0.3s;
+}
+
+/* styling for success.html end */
+
+/* Animations start */
+@keyframes myanime1 {
+	0% {
+		top: 17%;
+		left: -100%;
+	}
+	10% {
+		top: 17%;
+		left: -70%;
+	}
+	20% {
+		top: 17%;
+		left: -40%;
+	}
+	30% {
+		top: 17%;
+		left: -10%;
+	}
+	40% {
+		top: 17%;
+		left: 20%;
+	}
+	50% {
+		top: 17%;
+		left: 30%;
+	}
+}
+@keyframes myanime2 {
+	0% {
+		bottom: 17%;
+		left: -100%;
+	}
+	10% {
+		bottom: 17%;
+		left: -70%;
+	}
+	20% {
+		bottom: 17%;
+		left: -40%;
+	}
+	30% {
+		bottom: 17%;
+		left: -10%;
+	}
+	40% {
+		bottom: 17%;
+		left: 20%;
+	}
+	50% {
+		bottom: 17%;
+		left: 60%;
+	}
+}
+@keyframes myanime3 {
+	0% {
+		width: 0;
+		left: 20%;
+		height: 0;
+	}
+	50% {
+		width: 60%;
+		left: 50%;
+		height: 50%;
+	}
+}
+@keyframes myanime4 {
+	0% {
+		width: 0;
+		height: 0;
+	}
+	50% {
+		width: 15vh;
+		height: 15vh;
+	}
+}
+@keyframes myanime5 {
+	0% {
+		opacity: 0;
+	}
+	50% {
+		opacity: 1;
+	}
+}
+/* Animations end */
+
+@media screen and (max-width: 1250px) {
+	.container {
+		min-height: 100vh;
+		display: flex;
+		flex-direction: column;
+	}
+	.div1 {
+		width: 100%;
+		height: 350px;
+		position: relative;
+		background: linear-gradient(35deg, blue, brown); 
+	}
+	.card1 {
+		width: 400px;
+		height: 250px;
+		position: absolute;
+		top: 50%;
+		left: 40%;
+		transform: translateX(-50%);
+		-webkit-transform: translateX(-50%);
+		border-radius: 2vh;
+		background: linear-gradient(150deg, black, brown, black);
+		z-index: 1;
+		animation: none;
+	}
+	.logo {
+		padding: 30px 0 0 30px;
+	}
+	.logo img {
+		display: block;
+		width: 20%;
+		height: 100%;
+		object-fit: contain;
+	}
+	.emptyDiv {
+		padding: 10px;
+	}
+	.getInput {
+		height: 14vh;
+		padding: 25px;
+	}
+	.getCardNum {
+		text-align: center;
+		font-size: 28px;
+		color: white;
+		font-weight: bold;
+	}
+	.details {
+		display: flex;
+		justify-content: space-between;
+		padding: 20px 15px 0 15px;
+		font-weight: bold;
+		color: white;
+		font-size: 16px;
+	}
+	.card2 {
+		width: 400px;
+		height: 250px;
+		position: absolute;
+		top: 10%;
+		left: 60%;
+		transform: translateX(-50%);
+		-webkit-transform: translateX(-50%);
+		border-radius: 2vh;
+		background: url(images/bg-card-back.png) no-repeat center;
+		background-size: cover;
+		animation: none;
+	}
+	.getCvc {
+		position: absolute;
+		right: 40px;
+		top: 50%;
+		transform: translateY(-60%);
+		-webkit-transform: translateY(-60%);
+		color: white;
+		font-size: 20px;
+		letter-spacing: 0.3vh;
+		text-align: center;
+		font-weight: bold;
+	}
+	.div2 {
+		width: 100%;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		margin-top: 100px; 
+	}
+	#form {
+		padding: 4vh;
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		gap: 3vh;
+	}
+	.inputDiv {
+		display: flex;
+		flex-direction: column;
+		gap: 1vh;
+	}
+	input {
+		padding: 2vh;
+		border-radius: 1vh;
+		border: 0.2vh solid gray;
+		font-size: 14px;
+		font-weight: bold;
+	}
+	input:focus {
+		border: 0.5vh dotted purple;
+		outline: none;
+	}
+	label {
+		font-size: 14px;
+	}
+	.error1, .error2, .error3, .error4 {
+		height: 0;
+		overflow: hidden;
+		color: red;
+		font-size: 14px;
+	}
+	.error1-visible, .error2-visible, .error3-visible, .error4-visible {
+		height: initial;
+		padding: 0 0 0 2vh;
+		transition: 0.3s;
+	}
+	.error4-visible {
+		padding: 0.7vh 0 0 0;
+	}
+	.redBorder {
+		border: 1px solid red;
+	}
+	.date {
+		display: flex;
+		gap: 2vh;
+	}
+	.exp-date {
+		display: flex;
+		flex-direction: column;
+		gap: 1vh;
+	}
+	.cvcNum {
+		display: flex;
+		flex-direction: column;
+		gap: 1vh;
+	}
+	#month {
+		width: 100px;
+	}
+	#year {
+		width: 100px;
+	}
+	#cvcNumber {
+		width: 150px;
+	}
+	#btn {
+		font-size: 14px;
+		border: none;
+		padding: 2vh;
+		border-radius: 1vh;
+		background: black;
+		font-weight: bold;
+		color: white;
+		cursor: pointer;
+		transition: 0.3s;
+	}
+	#btn:hover {
+		background: brown;
+		transition: 0.3s;
+	}
+	/* success.html styling */
+	.thanksDiv {
+		justify-content: center;
+	}
+	.detailsContainer {
+		width: 100%;
+		height: 100%;
+		padding: 4vh;
+	}
+	.thankyou h1 {
+		font-size: initial;
+	}
+	.thankyou p {
+		font-size: 15px;
+	}
+	#continueBtn {
+		font-size: 16px;
+	}
+	.circle {
+		width: 100px;
+		height: 100px;
+	}
+}
+
+@media screen and (orientation: portrait) {
+	.container {
+		flex-direction: column;
+	}
+	.div1 {
+		width: 100%;
+		height: 30vh;
+	}
+	.card1 {
+		width: 70%;
+		top: 50%;
+		left: 40%;
+		transform: translateX(-50%);
+		-webkit-transform: translateX(-50%);
+		animation: none;
+		z-index: 1;
+	}
+	.getCardNum {
+		font-size: 2vh;
+	}
+	.card2 {
+		width: 70%;
+		top: 10%;
+		left: 60%;
+		transform: translateX(-50%);
+		-webkit-transform: translateX(-50%);
+		animation: none;
+	}
+	.div2 { 
+		margin-top: 17vh;
+		width: 100%;
+	}
+	#form {
+		padding: 4vh;
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		gap: 3vh;
+	}
+	input, label {
+		font-size: 1.5vh;
+	}
+	.error1, .error2, .error3, .error4 {
+		height: 0;
+		overflow: hidden;
+		color: red;
+		font-size: 1.5vh;
+	}
+	.error1-visible, .error2-visible, .error3-visible, .error4-visible {
+		height: initial;
+		padding: 0 0 0 0.3vh;
+		transition: 0.3s;
+	}
+	.error4-visible {
+		padding: 0.9vh 0 0 0;
+	}
+	#month {
+		width: 7vh;
+	}
+	#year {
+		width: 7vh;
+	}
+	#cvcNumber {
+		width: 15vh;
+	}
+
+	/* success.html styling */
+	.thanksDiv {
+		justify-content: center;
+	}
+	.detailsContainer {
+		width: 100%;
+		height: 100%;
+		padding: 4vh;
+	}
+	.circle {
+		width: 15vh;
+		height: 15vh;
+	}
+}
+
+@media screen and (max-width: 600px) {
+	.div1 {
+		height: 200px;
+	}
+	.card1 {
+		width: 250px;
+		height: 150px;
+		border-radius: 7px;
+	}
+	.logo {
+		padding: 20px 0 0 20px;
+	}
+	.logo img {
+		display: block;
+		width: 20%;
+		height: 100%;
+		object-fit: contain;
+	}
+	.emptyDiv {
+		padding: 10px;
+	}
+	.getInput {
+		height: 14vh;
+		padding: 10px;
+	}
+	.getCardNum {
+		text-align: center;
+		font-size: 18px;
+		color: white;
+		font-weight: bold;
+	}
+	.details {
+		display: flex;
+		justify-content: space-between;
+		padding: 10px 12px 0 12px;
+		font-weight: bold;
+		color: white;
+		font-size: 12px;
+	}
+	.card2 {
+		width: 250px;
+		height: 150px;
+		border-radius: 7px;
+	}
+	.getCvc {
+		right: 20px;
+		font-size: 14px;
+	}
+	.div2 {
+		margin-top: 70px;
+	}
+	.circle {
+		width: 15vh;
+		height: 15vh;
+	}
+}

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Frontend Mentor Interactive Card Details Form Solution">
+	<meta name="keywords" content="Frontend Mentor Interactive Card Details Form Solution, Interactive Card Details Form">
+	<meta name="author" content="Aimal Khan">
+	<title>Frontend Mentor | Interactive Card Details Form</title>
+	<link rel="icon" type="image/x-icon" href="./images/favicon-32x32.png">
+	<link rel="stylesheet" type="text/css" href="./styles.css">
+</head>
+<body>
+	<main>
+		<div class="container">
+			<div class="div1">
+				<div class="card1">
+					<div class="logo">
+						<img src="images/card-logo.svg" alt="logo">
+					</div>
+					<div class="emptyDiv"></div>
+					<div class="getInput">
+						<div class="getCardNum"></div>
+						<div class="details">
+							<div class="name"></div>
+							<div class="cvc">
+								<span class="span1"></span>/<span class="span2"></span>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="card2">
+					<div class="getCvc"></div>
+				</div>
+			</div>
+			<div class="div2">
+				<div class="thanksDiv">
+					<div class="detailsContainer">
+						<div class="circleContainer">
+							<div class="circle">
+								<div class="tickContainer">
+									<div class="tick1"></div>
+									<div class="tick2"></div>
+								</div>
+							</div>
+						</div>
+						<div class="textContainer">
+							<div class="thankyou">
+								<h1>THANK YOU!</h1>
+								<p>We've added your card details</p>
+							</div>
+							<div class="continueDiv">
+								<a href="index.html">
+									<button id="continueBtn">Continue</button>
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</main>
+</body>
+<script>
+	let urlParams = new URLSearchParams(window.location.search);
+	let nameValue = urlParams.get("name");
+	let cNumber = urlParams.get("cardnumber");
+	let cMonth = urlParams.get("month");
+	let cYear = urlParams.get("year");
+	let cvcnumber = urlParams.get("cvcnumber");
+	let x = document.querySelector(".getCardNum");
+	let y = document.querySelector(".name");
+	let z = document.querySelector(".span1");
+	let q = document.querySelector(".span2");
+	let u = document.querySelector(".getCvc");
+	x.innerHTML = cNumber;
+	y.innerHTML = nameValue.toUpperCase();
+	z.innerHTML = cMonth;
+	q.innerHTML = cYear;
+	u.innerHTML = cvcnumber;
+	if(cMonth.length == 1) {
+		z.innerHTML = `0${cMonth}`;
+	}
+</script>
+</html>
